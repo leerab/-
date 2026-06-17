@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>논문 최종 제출 일정</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif; background: #f8f8f6; display: flex; justify-content: center; padding: 24px 16px; }
+.wrap { position: relative; width: 100%; max-width: 680px; background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+.popup { display: none; position: absolute; background: white; border: 0.5px solid #B4B2A9; border-radius: 8px; padding: 12px 14px; font-size: 12px; line-height: 1.7; color: #5F5E5A; width: 260px; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.10); }
+.popup.open { display: block; }
+.popup strong { color: #2C2C2A; font-weight: 600; display: block; margin-bottom: 4px; }
+.popup ul { margin: 4px 0 0; padding-left: 14px; }
+.popup li { margin-bottom: 2px; }
+.popup .close-btn { float: right; background: none; border: none; cursor: pointer; font-size: 15px; color: #888780; margin: -4px -4px 0 0; line-height: 1; }
+.task { cursor: pointer; }
+.task rect { transition: filter 0.1s; }
+.task:hover rect { filter: brightness(0.92); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<svg width="100%" viewBox="0 0 680 870" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr-solid" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-dot" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-chain" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- 머리행 -->
+  <text x="95" y="22" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">날짜</text>
+  <text x="245" y="22" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">학생</text>
+  <text x="380" y="22" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">제본소</text>
+  <text x="520" y="22" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">학과</text>
+  <line x1="40" y1="30" x2="640" y2="30" stroke="#D3D1C7" stroke-width="0.5"/>
+  <line x1="60" y1="52" x2="60" y2="770" stroke="#B4B2A9" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- 6/28 -->
+  <rect x="40" y="46" width="110" height="32" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="95" y="62" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#085041">6월 28일(日)까지</text>
+  <g class="task" onclick="show('p-628-1',170,46)">
+    <rect x="170" y="46" width="150" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+    <text x="245" y="62" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">최종 논문 맡기기</text>
+  </g>
+  <line x1="320" y1="62" x2="338" y2="62" stroke="#444441" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <rect x="340" y="46" width="80" height="32" rx="6" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
+  <text x="380" y="62" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#72243E">제본소</text>
+  <path d="M360 78 L360 540" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arr-dot)"/>
+
+  <!-- 6/30 -->
+  <rect x="40" y="210" width="110" height="32" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="95" y="226" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#085041">6월 30일(火)까지</text>
+  <g class="task" onclick="show('p-630-1',170,180)">
+    <rect x="170" y="180" width="150" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+    <text x="245" y="196" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">인준지 맡기기</text>
+  </g>
+  <line x1="320" y1="196" x2="338" y2="196" stroke="#444441" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <rect x="340" y="180" width="80" height="32" rx="6" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
+  <text x="380" y="196" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#72243E">제본소</text>
+  <g class="task" onclick="show('p-630-2',170,222)">
+    <rect x="170" y="222" width="150" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+    <text x="245" y="238" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">제목변경 신청</text>
+  </g>
+  <g class="task" onclick="show('p-630-3',170,264)">
+    <rect x="170" y="264" width="150" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+    <text x="245" y="273" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">인준식 참가</text>
+    <text x="245" y="289" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">여부 통보</text>
+  </g>
+  <rect x="440" y="228" width="160" height="32" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text x="520" y="244" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C">학과</text>
+  <path d="M320 238 L438 244" fill="none" stroke="#444441" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <path d="M320 280 L438 252" fill="none" stroke="#444441" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <path d="M400 212 L400 416 L438 416" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arr-dot)"/>
+
+  <!-- 7/1 -->
+  <rect x="40" y="404" width="110" height="32" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="95" y="420" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#085041">7월 1일(水)</text>
+  <g class="task" onclick="show('p-71-1',170,404)">
+    <rect x="170" y="404" width="150" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+    <text x="245" y="420" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">인준식 참가</text>
+  </g>
+  <line x1="320" y1="420" x2="438" y2="420" stroke="#444441" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <rect x="440" y="404" width="160" height="32" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text x="520" y="420" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C">인준식</text>
+  <path d="M520 436 L520 510 L400 510 L400 540" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="10 4 2 4" marker-end="url(#arr-chain)"/>
+
+  <!-- 제본소 수령 -->
+  <rect x="340" y="540" width="80" height="32" rx="6" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
+  <text x="380" y="556" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#72243E">제본소 수령</text>
+  <path d="M420 556 L520 556 L520 662" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arr-dot)"/>
+
+  <!-- 7/3 -->
+  <rect x="40" y="662" width="110" height="32" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="95" y="678" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#085041">7월 3일(金)까지</text>
+  <g class="task" onclick="show('p-73-1',170,650)">
+    <rect x="170" y="650" width="240" height="44" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+    <text x="290" y="666" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">D콜 제출 및 학과 통보,</text>
+    <text x="290" y="684" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">4종 서류 제출</text>
+  </g>
+  <line x1="410" y1="672" x2="438" y2="672" stroke="#444441" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <rect x="440" y="662" width="160" height="32" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+  <text x="520" y="671" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C">오후 다섯시까지</text>
+  <text x="520" y="687" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">논문 학과 도착</text>
+
+  <!-- 범례 -->
+  <line x1="40" y1="758" x2="70" y2="758" stroke="#444441" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <text x="78" y="758" dominant-baseline="central" font-size="11" fill="#5F5E5A">학생</text>
+  <line x1="140" y1="758" x2="170" y2="758" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arr-dot)"/>
+  <text x="178" y="758" dominant-baseline="central" font-size="11" fill="#5F5E5A">제본소</text>
+  <line x1="260" y1="758" x2="290" y2="758" stroke="#444441" stroke-width="1" stroke-dasharray="10 4 2 4" marker-end="url(#arr-chain)"/>
+  <text x="298" y="758" dominant-baseline="central" font-size="11" fill="#5F5E5A">학과</text>
+  <text x="400" y="758" dominant-baseline="central" font-size="11" fill="#888780">* 학생 박스 클릭 시 상세 내용</text>
+</svg>
+
+<!-- 팝업 -->
+<div class="popup" id="p-628-1"><button class="close-btn" onclick="closeAll()">✕</button><strong>최종 논문 맡기기</strong>제본소에 최종 논문 파일 전달 및 제본 의뢰</div>
+
+<div class="popup" id="p-630-1"><button class="close-btn" onclick="closeAll()">✕</button><strong>인준지 맡기기</strong><ul><li>본인 과정 해당 양식 작성 필수</li><li>A4 X / 양식 프린트 X — 제본집에 인준지로 요청</li><li>수량: 3부</li><li>졸업년도/월: 2026년 08월</li><li>양식 자체 변경 X (여백·사이즈 일체 X)</li><li>글자체 변경 가능 (논문에 어울리는 글꼴)</li><li>주심·부심 성함은 심사 받은 내용으로 정리</li><li>작성 후 제본집 전달 → 인준지 양식 출력 요청</li><li>학과 일괄 수령 후 인준식 날 교수님 전달 예정</li><li>날인 후 제본집에 다시 맡겨 최종 논문에 삽입</li><li>~06.30(화)까지 제본집에 맡겨주세요</li></ul></div>
+
+<div class="popup" id="p-630-2"><button class="close-btn" onclick="closeAll()">✕</button><strong>제목변경 신청</strong>학과에 제목변경 신청서 제출</div>
+
+<div class="popup" id="p-630-3"><button class="close-btn" onclick="closeAll()">✕</button><strong>인준식 참가 여부 통보</strong>학과에 참가 가능 여부 통보<br>예) 홍길동 — 참석 가능 / 불가</div>
+
+<div class="popup" id="p-71-1"><button class="close-btn" onclick="closeAll()">✕</button><strong>인준식 참가</strong><ul><li>준비물: 인준지 3부</li><li>일시: 2026. 07. 01(수) 14시</li><li>장소: 아카피스관 1층 회의실</li></ul></div>
+
+<div class="popup" id="p-73-1"><button class="close-btn" onclick="closeAll()">✕</button><strong>D콜 제출 및 4종 서류 제출</strong><p style="margin:4px 0 6px">D콜: 메뉴얼 참조</p><strong style="font-size:12px">4종 서류:</strong><ul><li>학위논문이용허락동의서</li><li>학위논문 비공개 및 공개신청서</li><li>저작권동의서</li><li>제출확인서</li></ul></div>
+
+</div>
+<script>
+function show(id, bx, by) {
+  closeAll();
+  var el = document.getElementById(id);
+  var wrap = el.closest('.wrap');
+  var svg = wrap.querySelector('svg');
+  var rect = svg.getBoundingClientRect();
+  var wrapRect = wrap.getBoundingClientRect();
+  var scaleX = rect.width / 680;
+  var scaleY = rect.height / 870;
+  var left = bx * scaleX;
+  var top = (by + 36) * scaleY;
+  el.style.left = Math.min(left, rect.width - 270) + 'px';
+  el.style.top = top + 'px';
+  el.classList.add('open');
+}
+function closeAll() {
+  document.querySelectorAll('.popup').forEach(function(p){ p.classList.remove('open'); });
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.task') && !e.target.closest('.popup')) closeAll();
+});
+</script>
+</body>
+</html>
