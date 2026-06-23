@@ -39,30 +39,32 @@ body{font-family:'Nanum Gothic','Apple SD Gothic Neo',sans-serif;background:#f8f
 <rect x="150" y="46" width="110" height="44" rx="6" fill="#FEF3E2" stroke="#B85C00" stroke-width="0.5"/>
 <text x="205" text-anchor="middle" font-size="12" font-weight="700" fill="#7A3D00"><tspan x="205" y="61">6월 29일(月)</tspan><tspan x="205" y="76">오전 10시까지</tspan></text>
 <!-- 노란 둥근사각형 -->
-<rect x="270" y="36" width="170" height="184" rx="30" fill="none" stroke="#E8C800" stroke-width="1.5"/>
-<text x="355" y="158" text-anchor="middle" font-size="14" fill="#E8C800">가능하면 같이 맡길 예정</text>
+<rect x="270" y="36" width="170" height="94" rx="20" fill="none" stroke="#E8C800" stroke-width="1.5"/>
+<text x="355" y="142" text-anchor="middle" font-size="14" fill="#E8C800">한 이메일로</text>
 <!-- 학생 박스 -->
 <g class="task" onclick="show('p1',280,46)"><rect x="280" y="46" width="150" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/><text x="355" y="62" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">최종 논문(과제) 맡기기</text></g>
-<line x1="430" y1="62" x2="448" y2="62" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
-<!-- 제본소 박스 -->
-<rect x="450" y="46" width="80" height="32" rx="6" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
-<text x="490" y="62" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#72243E">제본소</text>
-<path d="M470 78L470 540" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
+<line x1="430" y1="62" x2="448" y2="72" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
+<!-- 인준지 맡기기 y=88 -->
+<g class="task" onclick="show('p2',280,88)"><rect x="280" y="88" width="150" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/><text x="355" y="104" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">인준지 맡기기</text></g>
+<line x1="430" y1="104" x2="448" y2="94" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
+<!-- 제본소 박스 (통합) -->
+<rect x="450" y="67" width="80" height="32" rx="6" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
+<text x="490" y="83" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#72243E">제본소</text>
+<path d="M490 99L490 538" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
+<text x="478" y="319" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A" transform="rotate(-90,478,319)">본파일</text>
+<path d="M530 83L630 83L630 241" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
+<text x="618" y="163" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A" transform="rotate(-90,618,163)">인준지</text>
 <!-- 날짜 박스 - 6/30 -->
-<rect x="150" y="210" width="110" height="32" rx="6" fill="#FEF3E2" stroke="#B85C00" stroke-width="0.5"/>
-<text x="205" y="226" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#7A3D00">6월 30일(火)까지</text>
-<g class="task" onclick="show('p2',280,180)"><rect x="280" y="180" width="150" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/><text x="355" y="196" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">인준지 맡기기</text></g>
-<line x1="430" y1="196" x2="448" y2="196" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
-<rect x="450" y="180" width="80" height="32" rx="6" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
-<text x="490" y="196" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#72243E">제본소</text>
+<rect x="150" y="243" width="110" height="32" rx="6" fill="#FEF3E2" stroke="#B85C00" stroke-width="0.5"/>
+<text x="205" y="259" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#7A3D00">6월 30일(火)까지</text>
 <g class="task" onclick="show('p3',280,222)"><rect x="280" y="222" width="150" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/><text x="355" y="238" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">제목 변경 신청</text></g>
 <g class="task" onclick="show('p4',280,264)"><rect x="280" y="264" width="170" height="32" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/><text x="365" y="280" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#27500A">인준식 참가 여부 통보</text></g>
-<rect x="550" y="228" width="160" height="32" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
-<text x="630" y="244" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C">학과</text>
-<path d="M430 238L548 244" fill="none" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
-<path d="M450 280L548 252" fill="none" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
-<path d="M530 196L630 196L630 228" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
-<path d="M630 260L630 404" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="10 4 2 4" marker-end="url(#ac)"/>
+<rect x="550" y="243" width="160" height="32" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="630" y="259" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C">학과</text>
+<path d="M430 238L548 255" fill="none" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
+<path d="M450 280L548 263" fill="none" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
+
+<path d="M630 277L630 404" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="10 4 2 4" marker-end="url(#ac)"/>
 <!-- 날짜 박스 - 7/1 -->
 <rect x="150" y="404" width="110" height="32" rx="6" fill="#FEF3E2" stroke="#B85C00" stroke-width="0.5"/>
 <text x="205" y="420" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#7A3D00">7월 1일(水)</text>
@@ -70,13 +72,13 @@ body{font-family:'Nanum Gothic','Apple SD Gothic Neo',sans-serif;background:#f8f
 <line x1="430" y1="420" x2="548" y2="420" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
 <rect x="550" y="404" width="160" height="32" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
 <text x="630" y="420" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C">인준식</text>
-<path d="M630 436L630 510L510 510L510 540" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="10 4 2 4" marker-end="url(#ad)"/>
+<path d="M630 436L630 510L490 510L490 538" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="10 4 2 4" marker-end="url(#ad)"/>
 <!-- 제본소(세번째) -->
-<rect x="450" y="540" width="80" height="32" rx="6" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
-<text x="490" y="556" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#72243E">제본소</text>
-<path d="M530 556L630 556L630 692" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
-<path d="M450 556L355 556L355 650" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
-<text x="345" text-anchor="middle" font-size="10" fill="#5F5E5A"><tspan x="345" y="534">제본소에서 도장 찍힌 인준지와</tspan><tspan x="345" y="548">본파일을 합체시켜서 보내줌</tspan></text>
+<rect x="430" y="540" width="120" height="44" rx="6" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
+<text x="490" text-anchor="middle" font-size="12" font-weight="700" fill="#72243E"><tspan x="490" y="556">제본소</tspan><tspan x="490" y="572" font-size="10">(본파일과 인준지 합체)</tspan></text>
+<path d="M552 556L630 556L630 692" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
+<path d="M428 556L355 556L355 650" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
+<text x="345" y="541" text-anchor="middle" dominant-baseline="central" font-size="10" fill="#5F5E5A">최종 PDF 파일</text>
 <text x="618" y="610" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A" transform="rotate(-90,618,610)">하드커버 2부</text>
 <!-- 7/3 -->
 <rect x="150" y="662" width="110" height="32" rx="6" fill="#FEF3E2" stroke="#B85C00" stroke-width="0.5"/>
@@ -98,8 +100,8 @@ body{font-family:'Nanum Gothic','Apple SD Gothic Neo',sans-serif;background:#f8f
 <rect x="550" y="820" width="160" height="32" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
 <text x="630" y="836" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="#0C447C">향후 공지</text>
 <!-- 제본소(세번째) → 학생 박스 점선 -->
-<path d="M490 572L490 784L355 784L355 820" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
-<text x="478" y="610" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A" transform="rotate(-90,478,610)">나머지 제본</text>
+<path d="M490 584L490 784L355 784L355 820" fill="none" stroke="#444441" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#ad)"/>
+<text x="478" y="752" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A" transform="rotate(-90,478,752)">나머지 제본</text>
 <!-- 범례 -->
 <line x1="40" y1="960" x2="70" y2="960" stroke="#444441" stroke-width="3" marker-end="url(#as)"/>
 <text x="78" y="960" dominant-baseline="central" font-size="15" fill="#5F5E5A">학생</text>
@@ -132,11 +134,11 @@ body{font-family:'Nanum Gothic','Apple SD Gothic Neo',sans-serif;background:#f8f
 </ol>
 </div>
 <div class="popup" id="p2"><button class="close-btn" onclick="closeAll()">✕</button><strong>인준지 맡기기</strong><ul><li>본인 과정 해당 양식 작성 필수</li><li>A4 X / 양식 프린트 X — 제본집에 인준지로 요청</li><li>수량: 3부</li><li>졸업년도/월: 2026년 08월</li><li>양식 자체 변경 X (여백·사이즈 일체 X)</li><li>글자체 변경 가능 (논문(과제)에 어울리는 글꼴)</li><li>주심·부심 성함은 심사 받은 내용으로 정리</li><li>작성 후 제본집 전달 → 인준지 양식 출력 요청</li><li>학과 일괄 수령 후 인준식 날 교수님 전달 예정</li><li>날인 후 제본집에 다시 맡겨 최종 논문(과제)에 삽입</li><li>~06.30(화)까지 제본집에 맡겨주세요</li></ul></div>
-<div class="popup" id="p3"><button class="close-btn" onclick="closeAll()">✕</button><strong>제목 변경 신청</strong><p style="margin:0 0 6px">심사 이후 제목에 변경이 있는 경우에만 해당.</p><p style="margin:0 0 4px">논문(과제)심사결과보고서 제출: 최종 논문(과제) 제목 변경된 경우 반드시 제출</p><ul><li>본인 과정에 해당하는 양식 작성 필수</li><li>제목 변경 없는 경우 제출하지 않음</li><li>기존에 보내드린 메일 및 양식 확인 요망</li><li>'논문(과제)심사결과보고서' 양식은 5월에 학과에서 받은 메일에 있음</li><li>변경된 제목은 국문만 적음</li></ul></div>
+<div class="popup" id="p3"><button class="close-btn" onclick="closeAll()">✕</button><strong>제목 변경 신청</strong><p style="margin:0 0 6px">심사 이후 제목에 변경이 있는 경우에만 해당.</p><p style="margin:0 0 4px">논문(과제)심사결과보고서 제출: 최종 논문(과제) 제목 변경된 경우 반드시 제출</p><ul><li>본인 과정에 해당하는 양식 작성 필수</li><li>제목 변경 없는 경우 제출하지 않음</li><li>기존에 보내드린 메일 및 양식 확인 요망: '논문(과제)심사결과보고서' 양식은 5월에 학과에서 받은 메일에 있음</li><li>변경된 제목은 국문만 적음</li></ul></div>
 <div class="popup" id="p4"><button class="close-btn" onclick="closeAll()">✕</button><strong>인준식 참가 여부 통보</strong>학과 메일로 참가 여부 통보<br>예) 홍길동 — 참석 가능 / 불가</div>
 <div class="popup" id="p5"><button class="close-btn" onclick="closeAll()">✕</button><strong>인준식 참가</strong><ul><li>국내 거주자는 가급적 참여 요망</li><li>준비물: 인준지 3부 (제본소에서 학과로 직접 전달됨)</li><li>일시: 2026. 07. 01(수) 14시</li><li>장소: 아카피스관 1층 회의실</li></ul></div>
 <div class="popup" id="p6"><button class="close-btn" onclick="closeAll()">✕</button><strong>d콜 제출</strong>학과 메일에 첨부된 pdf 파일 '디콜렉션매뉴얼0705' 참조.</div>
-<div class="popup" id="p7"><button class="close-btn" onclick="closeAll()">✕</button><strong>d콜 제출 통보 및 4종 서류 제출</strong><p style="margin:4px 0 6px">d콜 제출 후 학과에 제출했다고 통보<br><span class="note">(학과에서 확인하는 데 2~3일 소요)</span></p><strong style="font-size:12px">4종 서류도 제출:</strong><ul><li>학위논문(과제) 비공개 및 공개신청서 <span class="note">(메일 유첨)</span></li><li>학위논문(과제)이용허락동의서 <span class="note">(메일 유첨: 포폴은 X)</span></li><li>저작권동의서 <span class="note">(d콜렉션에서 다운)</span></li><li>제출확인서 <span class="note">(d콜렉션에서 다운)</span></li></ul></div>
+<div class="popup" id="p7"><button class="close-btn" onclick="closeAll()">✕</button><strong>d콜 제출 통보 및 4종 서류 제출</strong><p style="margin:4px 0 6px">d콜 제출 후 학과에 제출했다고 통보<br><span class="note">(학과에서 확인하는 데 2~3일 소요)</span></p><strong style="font-size:12px">4종 서류도 제출:</strong><ul><li>&lt;2026-1학기 최종논문 제출+제목변경+인준식+단톡방 안내_필독 후 회신&gt; 메일에 따라 작성할 것.</li><li>학위논문(과제) 비공개 및 공개신청서 <span class="note">(메일 유첨)</span></li><li>학위논문(과제)이용허락동의서 <span class="note">(메일 유첨: 포폴은 X)</span></li><li>저작권동의서 <span class="note">(d콜렉션에서 다운)</span></li><li>제출확인서 <span class="note">(d콜렉션에서 다운)</span></li></ul></div>
 <div class="popup" id="p8"><button class="close-btn" onclick="closeAll()">✕</button><strong>교수님들께 제본 드리기</strong><ul><li>방식은 향후 결정</li></ul></div>
 </div>
 <script>
